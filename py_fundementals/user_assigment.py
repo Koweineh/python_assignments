@@ -44,7 +44,7 @@ user_2.make_withdraw(100)
 user_3.make_deposit(10000)
 user_3.make_withdraw(100)
 user_3.make_withdraw(100)
-user_3.make_transfer(1000, user_1.balance)
+
 
 print(user_1.balance)
 print(user_2.balance)
