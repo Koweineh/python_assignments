@@ -37,11 +37,14 @@ class Bank(User):
             print("Insufficient funds : Balance available : " ,self.balance)
         else:
             self.balance = self.balance - self.amount
-            print("You have Withdrawn : " ,self.balance)       
+            print("You have Withdrawn : " ,self.withdraw)       
         
     def view_balance(self):
         self.show_details()   
-        print("Your current account balance is  : " ,self.balance)    
+        print("Your current account balance is  : " ,self.balance)    \
+            
+            
+            
 
 
 karam = Bank("Karam", "Male", "37")
