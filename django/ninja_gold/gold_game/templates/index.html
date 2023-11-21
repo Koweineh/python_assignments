@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ninja Gold Game</title>
+</head>
+<body>
+    <h1>Ninja Gold Game</h1>
+    <p>Gold: {{ request.session.gold }}</p>
+
+    <h2>Activities:</h2>
+  
+       <form  method="post"  action="/process_money">
+        {%csrf_token %}
+        <p>Farm </p>
+        <input type="hidden" name="category" value="farm">
+        <input type="submit" value="click me">
+       </form>
+
+       <form  method="post"  action="/process_money">
+        {%csrf_token %}
+        <p>Cave</p>
+        <input type="hidden" name="category" value="cave">
+        <input type="submit" value="click me">
+       </form>
+
+       <form  method="post"  action="/process_money">
+        {%csrf_token %}
+        <p>house </p>
+        <input type="hidden" name="category" value="house">
+        <input type="submit" value="click me">
+       </form>
+
+       <form  method="post"  action="/process_money">
+        {%csrf_token %}
+        <p>casino </p>
+        <input type="hidden" name="category" value="casino">
+        <input type="submit" value="click me">
+        <br/>
+        <p>Activities</p>
+        <div style="border: 2px black solid;">
+            {%for act in request.session.activity%}
+            <p>{{act}}</p>
+            {%endfor%}
+        </div>
+       </form>
+
+
+   
+</body>
+</html>

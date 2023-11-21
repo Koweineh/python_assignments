@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Great Number Game</title>
+</head>
+<body>
+    <h1>Guess the Number Game</h1>
+    <form method="post" action=''>
+        {% csrf_token %}
+        {% if result %}
+            <p>{{ result }}</p>
+        {% endif %}
+        <input type="number" name="user_guess">
+        <button type="submit">Submit Guess</button>
+    </form>
+</body>
+</html>

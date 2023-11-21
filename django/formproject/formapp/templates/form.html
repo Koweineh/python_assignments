@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+   
+    <form method="POST" action="/result">
+        {% csrf_token %}
+      <p>First Name : <input type="text" name="fname" /></p>
+      <p>
+        Dojo location :
+        <select name="Dojo_Location">
+          <option value="germany">germany</option>
+          <option value="italy">italy</option>
+          <option value="france">france</option>
+        </select>
+      </p>
+      <p> Favorite_language : 
+        <select name="Favorite_language">
+          <option value="python">python</option>
+          <option value="JS">JS</option>
+          <option value="Java">Java</option>
+        </select>
+      </p>
+      <p>
+        Comment <br />
+        <textarea name="comment" id="" cols="50" rows="20"> </textarea>
+      </p>
+      <input type="submit" value="Submit Form">
+    </form>
+  </body>
+</html>

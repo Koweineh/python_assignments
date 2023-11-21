@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form method ="POST" action="/route1">
+        {%csrf_token %}
+<p>First name  <input type="text" name="fname"></p>
+<p>Last name  <input type="text" name="lname"></p>
+<p>FAvorite color :<select name="favorite" >
+    <option value="yellow">yellow</option>
+    <option value="blue">blue</option>
+    <option value="red">red</option>
+</select></p>
+<input type="hidden" name="pwd" value="123456">
+<input type="submit" value="Send Form">
+
+
+
+
+    </form>
+</body>
+</html> 
