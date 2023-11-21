@@ -27,7 +27,7 @@ def process_money(request):
         
     gold = random.randint(x, y)
     request.session["gold"] += gold
-    request.session["activity"].append("You have earned"+ str(gold)+" from "+category+" .")
+    request.session["activity"].append("You have earned"+ str(gold)+ " from "+category+ " .")
     return redirect('/')
 
 def reset(request):
