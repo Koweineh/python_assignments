@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="display: flex;">
+
+    <form  method="POST"    action="/addDojo">
+    {%csrf_token %}
+    <p>Name :<input type="text" name="dname"></p>
+    <p>City :<input type="text" name="city"></p>
+    <p>State :<input type="text" name="state"></p>
+    <p><input type="submit" value="Add Dojo"></p>
+    </form>
+
+
+    <form  method="POST"    action="/addNinja">
+        {%csrf_token %}
+        <p>First Name :<input type="text" name="fname"></p>
+        <p>Last Name :<input type="text" name="lname"></p>
+        <select name="dojosss" >
+            {%for d in xxx %}
+            <option value="{{d.id}}">{{d.name}}</option>
+            {%endfor %}
+        </select>
+        <p><input type="submit" value="Add Ninja"></p>
+        </form>
+        
+        <hr>
+        {%for dojo in xxx %}
+        {{dojo.name}}
+        <ul>
+            {% for nin in dojo.ninjas.all%}
+            <li>{{nin.first_name}} , {{nin.last_name}}</li>
+            {%endfor %}
+        </ul>
+        {%endfor %}
+        
+    
+</body>
+</html>

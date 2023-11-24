@@ -7,7 +7,7 @@ def method1(request):
 
 
 def method2(request):
-    User.objects.create(name=request.POST["name"],email=request.POST["email"],age=request.POST["age"])
+    User.objects.create(name=request.POST["name"],email=request.POST["email"],age=request.POST["age"],color=request.POST["color"])
     
     return redirect("/xxx")
 

@@ -8,11 +8,12 @@
   <body>
     <table style="border: black solid 2px" width="50%">
         <tr>
-            <th>name</th>
-            <th>email</th>
-            <th>age</th>
-            <th>created_at</th>
-            <th>updated_at</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Age</th>
+            <th>Color</th>
+            <th>Created_at</th>
+            <th>Updated_at</th>
         </tr>
         
         {%for s in allusers %}
@@ -20,6 +21,7 @@
           <td>{{s.name}}</td>
           <td>{{s.email}}</td>
           <td>{{s.age}}</td>
+          <td>{{s.color}}</td>
           <td>{{s.created_at}}</td>
           <td>{{s.updated_at}}</td>
         </tr>
@@ -27,19 +29,21 @@
       </table>
       <hr>
 
-    <form method="post" action="/handleform">
+    <form method="post" action="/69">
       {%csrf_token %}
       <table style="border: black solid 2px" width="50%">
         <tr>
           <th>name</th>
           <th>email</th>
           <th>age</th>
+          <th>Color</th>
         </tr>
 
         <tr>
           <td><input type="text" name="name" /></td>
           <td><input type="text" name="email" /></td>
           <td><input type="number" name="age" /></td>
+          <td><input type="text" name="color" /></td>
         </tr>
       </table>
       <br />
